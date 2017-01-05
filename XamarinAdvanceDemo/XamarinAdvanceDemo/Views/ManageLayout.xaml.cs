@@ -62,12 +62,7 @@ namespace XamarinAdvanceDemo.Views
                 await DisplayAlert("ERROR", ex.ToString(), "OK");
             }            
         }
-
-        private void selectedpeople(object sender, SelectedItemChangedEventArgs e)
-        {
-            selectedMSP = (MSP)e.SelectedItem;            
-        }       
-
+ 
         protected override void OnAppearing()
         {
             base.OnAppearing();

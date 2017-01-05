@@ -23,17 +23,11 @@ namespace XamarinAdvanceDemo.Services
         // check whether the dedault group is created, if not create it.
         public async void checkGroupSetting()
         {
-            Boolean found = true;
             try
             {
-                var exist = await client.GetPersonGroupAsync(Constant.DefaultGroupName);
+                await client.GetPersonGroupAsync(Constant.DefaultGroupName);
             }
             catch (Exception e)
-            {
-                found = false;
-            }
-
-            if (!found)
             {
                 await client.CreatePersonGroupAsync(Constant.DefaultGroupName, Constant.DefaultGroupName);
             }
